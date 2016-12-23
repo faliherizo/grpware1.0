@@ -1,5 +1,5 @@
 {
-  "name": "angular-quickstart",
+  "name": "grpware1.0",
   "version": "1.0.0",
   "description": "QuickStart package.json from the documentation, supplemented with testing support",
   "scripts": {
@@ -11,7 +11,11 @@
     "test": "tsc && concurrently \"tsc -w\" \"karma start karma.conf.js\"",
     "test-once": "tsc && karma start karma.conf.js --single-run",
     "tsc": "tsc",
-    "tsc:w": "tsc -w"
+    "tsc:w": "tsc -w",
+    "vendor": "gulp vendor",
+    "gulp": "npm run vendor && gulp",
+    "postinstall": "typings install",
+    "typings": "typings"
   },
   "keywords": [],
   "author": "",
@@ -30,7 +34,8 @@
     "core-js": "^2.4.1",
     "reflect-metadata": "^0.1.8",
     "rxjs": "5.0.1",
-    "zone.js": "^0.7.4"
+    "zone.js": "^0.7.4",
+    "es6-shim": "^0.35.0"
   },
   "devDependencies": {
     "@types/jasmine": "^2.5.36",
