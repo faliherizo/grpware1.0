@@ -19,7 +19,10 @@ gulp.task('build-copy', function () {
     return gulp.src([appDev + '**/*.html', appDev + '**/*.htm', appDev + '**/*.css'])
         .pipe(gulp.dest(appProd));
 });
-
+gulp.task('watch', function () {
+    gulp.watch(appDev + '**/*.ts', ['build-ts']);
+    gulp.watch(appDev + '**/*.{html,htm,css}', ['build-copy']);
+});
 gulp.task('vendor', function() {
 
     // Angular 2 Framework
@@ -33,7 +36,9 @@ gulp.task('vendor', function() {
     //reflect metadata
     gulp.src('node_modules/reflect-metadata/**')
         .pipe(gulp.dest(vendor + '/reflect-metadata/'));
-
+    //rxjs
+    gulp.src('node_modules/rxjs/**')
+        .pipe(gulp.dest(vendor + '/rxjs/'));
     //systemjs
     gulp.src('node_modules/systemjs/**')
         .pipe(gulp.dest(vendor + '/systemjs/'));
@@ -43,9 +48,6 @@ gulp.task('vendor', function() {
         .pipe(gulp.dest(vendor + '/zone.js/'));
 });
 
-gulp.task('watch', function () {
-    gulp.watch(appDev + '**/*.ts', ['build-ts']);
-    gulp.watch(appDev + '**/*.{html,htm,css}', ['build-copy']);
-});
+
 
 gulp.task('default', ['watch', 'build-ts', 'build-copy']);
