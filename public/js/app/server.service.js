@@ -1,0 +1,16 @@
+"use strict";
+var http = require('http');
+var fs = require('fs');
+var ServerService = (function () {
+    function ServerService(http) {
+        this.http = http;
+    }
+    ServerService.prototype.connectServer = function () {
+    };
+    ServerService.prototype.isconnected = function () {
+    };
+    return ServerService;
+}());
+exports.ServerService = ServerService;
+
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNlcnZlci5zZXJ2aWNlLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7QUFLQSxJQUFJLElBQUksR0FBRyxPQUFPLENBQUMsTUFBTSxDQUFDLENBQUM7QUFFM0IsSUFBSSxFQUFFLEdBQUcsT0FBTyxDQUFDLElBQUksQ0FBQyxDQUFDO0FBRXZCO0lBQ0ksdUJBQW9CLElBQVU7UUFBVixTQUFJLEdBQUosSUFBSSxDQUFNO0lBQzlCLENBQUM7SUFFRCxxQ0FBYSxHQUFiO0lBRUEsQ0FBQztJQUVELG1DQUFXLEdBQVg7SUFFQSxDQUFDO0lBSUwsb0JBQUM7QUFBRCxDQWRBLEFBY0MsSUFBQTtBQWRZLHFCQUFhLGdCQWN6QixDQUFBIiwiZmlsZSI6InNlcnZlci5zZXJ2aWNlLmpzIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHtJbmplY3RhYmxlfSBmcm9tIFwiQGFuZ3VsYXIvY29yZVwiO1xuaW1wb3J0IHtNZXNzYWdlfSBmcm9tIFwiLi9tZXNzYWdlcy5tb2RlbFwiO1xuaW1wb3J0IHtIdHRwLCBIZWFkZXJzLCBSZXNwb25zZX0gZnJvbSBcIkBhbmd1bGFyL2h0dHBcIjtcbmltcG9ydCB7T2JzZXJ2YWJsZX0gZnJvbSBcInJ4anMvT2JzZXJ2YWJsZVwiO1xuXG52YXIgaHR0cCA9IHJlcXVpcmUoJ2h0dHAnKTtcblxudmFyIGZzID0gcmVxdWlyZSgnZnMnKTtcblxuZXhwb3J0IGNsYXNzIFNlcnZlclNlcnZpY2Uge1xuICAgIGNvbnN0cnVjdG9yKHByaXZhdGUgaHR0cDogSHR0cCkge1xuICAgIH1cblxuICAgIGNvbm5lY3RTZXJ2ZXIoKXtcblxuICAgIH1cblxuICAgIGlzY29ubmVjdGVkKCl7XG5cbiAgICB9XG5cblxuXG59Il0sInNvdXJjZVJvb3QiOiIvc291cmNlLyJ9

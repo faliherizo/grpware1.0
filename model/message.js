@@ -4,11 +4,8 @@ var Schema = mongoose.Schema;
 var message = new Schema({
     content:{type:String, required:true},
     groupname:{type:String, required:true},
-    username:{type:String, required:true},
-    datesent:{type:Date},
-    member:[{
-        username:{type:String, required:true},
-    }]
+    username:{type:String, required:true}
+
 });
 
 

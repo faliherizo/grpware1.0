@@ -1,7 +1,7 @@
 var gulp = require('gulp');
 var typescript = require('gulp-typescript');
 var sourcemaps = require('gulp-sourcemaps');
-var appDev = '/app/';
+var appDev = 'app/';
 var appProd = 'public/js/app/';
 var vendor = 'public/js/vendor';
 var tsProject = typescript.createProject('tsconfig.json');
@@ -39,6 +39,9 @@ gulp.task('vendor', function() {
     //rxjs
     gulp.src('node_modules/rxjs/**')
         .pipe(gulp.dest(vendor + '/rxjs/'));
+    gulp.src('node_modules/core-js/**')
+        .pipe(gulp.dest(vendor + '/core-js/'));
+
     //systemjs
     gulp.src('node_modules/systemjs/**')
         .pipe(gulp.dest(vendor + '/systemjs/'));

@@ -9,16 +9,33 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+var messages_model_1 = require('./messages.model');
+var message_service_1 = require("./message.service");
 var AppComponent = (function () {
-    function AppComponent() {
-        this.name = 'Angular';
+    function AppComponent(messageService) {
+        this.messageService = messageService;
+        this.messages = [];
     }
+    AppComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.messageService.getMessages()
+            .subscribe(function (messages) { return _this.messages = messages; }, function (error) { return console.error(error); });
+    };
+    AppComponent.prototype.onAddMessage = function () {
+        var rnd = Math.ceil(Math.random() * 100);
+        var message = new messages_model_1.Message(rnd + 'is an awesome number!');
+        this.messages.push(message);
+        this.messageService.saveMessage(message)
+            .subscribe(function () { return console.log('Success!'); }, function (error) { return console.error(error); });
+    };
     AppComponent = __decorate([
         core_1.Component({
+            moduleId: module.id,
             selector: 'my-app',
-            template: "<h1>Hello {{name}}</h1>",
+            templateUrl: 'app.template.html',
+            providers: [message_service_1.MessageService]
         }), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [message_service_1.MessageService])
     ], AppComponent);
     return AppComponent;
 }());
