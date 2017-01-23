@@ -5,8 +5,8 @@
 (function (global) {
   System.config({
     paths: {
-      // paths serve as alias
-      'npm:': 'node_modules/'
+      // paths serve as alias   /node_modules
+      'npm:': 'js/vendor/'
     },
     // map tells the System loader where to look for things
     map: {

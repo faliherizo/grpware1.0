@@ -7,10 +7,19 @@ var bodyParser = require('body-parser');
 var mongoose =require('mongoose');
 var http = require('http');
 var fs = require('fs');
+var Peer = require('peer');
 
+
+var io = require('socket.io-client');
 var appRoutes = require('./routes/app');
 var app = express();
+
+
+//var socket =  require('./routes/sockets');
+
+//socket.Sockets(app, )
 mongoose.connect('localhost:27017/node-angular2');
+
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));

@@ -36,9 +36,12 @@ gulp.task('vendor', function() {
     //reflect metadata
     gulp.src('node_modules/reflect-metadata/**')
         .pipe(gulp.dest(vendor + '/reflect-metadata/'));
+
     //rxjs
     gulp.src('node_modules/rxjs/**')
         .pipe(gulp.dest(vendor + '/rxjs/'));
+
+
     gulp.src('node_modules/core-js/**')
         .pipe(gulp.dest(vendor + '/core-js/'));
 
@@ -46,9 +49,28 @@ gulp.task('vendor', function() {
     gulp.src('node_modules/systemjs/**')
         .pipe(gulp.dest(vendor + '/systemjs/'));
 
+    //socket.io
+    gulp.src('node_modules/socket.io/**')
+        .pipe(gulp.dest(vendor + '/socket.io/'));
+
+    //socket.io
+    gulp.src('node_modules/socket.io-adapter/**')
+        .pipe(gulp.dest(vendor + '/socket.io-adapter/'));
+    gulp.src('node_modules/socket.io-client/**')
+        .pipe(gulp.dest(vendor + '/socket.io-client/'));
+    gulp.src('node_modules/socket.io-client/**')
+        .pipe(gulp.dest(vendor + '/socket.io-parser/'));
+    gulp.src('node_modules/jade/**')
+        .pipe(gulp.dest(vendor + '/jade/'));
+
+    gulp.src('node_modules/ng-simple-webrtc/**')
+        .pipe(gulp.dest(vendor + '/ng-simple-webrtc/'));
+    gulp.src('node_modules/simplewebrtc/**')
+        .pipe(gulp.dest(vendor + '/simplewebrtc/'));
     //zonejs
     return gulp.src('node_modules/zone.js/**')
         .pipe(gulp.dest(vendor + '/zone.js/'));
+
 });
 
 

@@ -85,7 +85,6 @@ var Reflect;
       *
       */
     function decorate(decorators, target, targetKey, targetDescriptor) {
-        if (targetDescriptor === void 0) { targetDescriptor = null; }
         if (!IsUndefined(targetKey)) {
             if (!IsArray(decorators))
                 throw new TypeError();
@@ -691,8 +690,9 @@ var Reflect;
     function IsUndefined(x) {
         return x === undefined;
     }
-    null;
-    {
+    // 6.1.2 The Null Type
+    // https://tc39.github.io/ecma262/#sec-ecmascript-language-types-null-type
+    function IsNull(x) {
         return x === null;
     }
     // 6.1.5 The Symbol Type
@@ -703,11 +703,13 @@ var Reflect;
     // 6.1.7 The Object Type
     // https://tc39.github.io/ecma262/#sec-object-type
     function IsObject(x) {
-        if (x === void 0) { x = null | boolean | string | symbol | number; }
         return typeof x === "object" ? x !== null : typeof x === "function";
     }
-    null | boolean | string | symbol | number;
-    {
+    // 7.1 Type Conversion
+    // https://tc39.github.io/ecma262/#sec-type-conversion
+    // 7.1.1 ToPrimitive(input [, PreferredType])
+    // https://tc39.github.io/ecma262/#sec-toprimitive
+    function ToPrimitive(input, PreferredType) {
         switch (Type(input)) {
             case 0 /* Undefined */: return input;
             case 1 /* Null */: return input;
@@ -726,8 +728,9 @@ var Reflect;
         }
         return OrdinaryToPrimitive(input, hint === "default" ? "number" : hint);
     }
-    null | boolean | string | symbol | number;
-    {
+    // 7.1.1.1 OrdinaryToPrimitive(O, hint)
+    // https://tc39.github.io/ecma262/#sec-ordinarytoprimitive
+    function OrdinaryToPrimitive(O, hint) {
         if (hint === "string") {
             var toString_1 = O.toString;
             if (IsCallable(toString_1)) {
@@ -827,8 +830,9 @@ var Reflect;
     function IteratorValue(iterResult) {
         return iterResult.value;
     }
-    false;
-    {
+    // 7.4.5 IteratorStep(iterator)
+    // https://tc39.github.io/ecma262/#sec-iteratorstep
+    function IteratorStep(iterator) {
         var result = iterator.next();
         return result.done ? false : result;
     }

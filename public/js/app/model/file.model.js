@@ -1,0 +1,5 @@
+/**
+ * Created by Faliherizo on 04/01/2017.
+ */
+
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uLy4uL2dycHdhcmUxLjAvYXBwL21vZGVsL2ZpbGUubW9kZWwudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7O0dBRUciLCJmaWxlIjoibW9kZWwvZmlsZS5tb2RlbC5qcyIsInNvdXJjZXNDb250ZW50IjpbIi8qKlxuICogQ3JlYXRlZCBieSBGYWxpaGVyaXpvIG9uIDA0LzAxLzIwMTcuXG4gKi9cbiJdLCJzb3VyY2VSb290IjoiL3NvdXJjZS8ifQ==

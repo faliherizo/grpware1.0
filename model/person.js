@@ -3,7 +3,7 @@ var Schema = mongoose.Schema;
 
 // create a schema
 var userSchema = new Schema({
-    name: String,
+    name:{ type:  String},
     photo:{ type: String, required: false },
     username: { type: String, required: true, unique: true },
     isconnected:{ type:Boolean},

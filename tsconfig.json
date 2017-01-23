@@ -7,7 +7,17 @@
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "lib": [ "es2015", "dom" ],
-    "noImplicitAny": true,
-    "suppressImplicitAnyIndexErrors": true
+    "noImplicitAny": false,
+    "suppressImplicitAnyIndexErrors": true,
+    "outDir": "../public/js/app"
+  },
+  "files": [
+    "./app/*"
+  ],
+  "exclude": [
+    "node_modules"
+  ],
+  "atom": {
+    "rewriteTsconfig": true
   }
 }

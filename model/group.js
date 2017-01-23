@@ -1,15 +1,14 @@
 var mongoose= require('mongoose');
 var Schema = mongoose.Schema;
 
-var schema = new Schema({
-   //id:{type:ObjectId,required: true, unique: true},
+var groupSchema = new Schema({
    name:{type:String, required:true},
-   photo:{type:String, required:false},
-   user:{type:String, required:true},
+   imgSrc:{type:String, required:false},
+   user_created:{type:String, ref:'Person'},
    description:{type:String, required:false},
-   member:[{
-      username:{type:String},
+   members:[{
+      type:Schema.ObjectId,ref:'Person'
    }]
 });
 
-module.exports= mongoose.model('Group', schema);
+module.exports= mongoose.model('Group', groupSchema);

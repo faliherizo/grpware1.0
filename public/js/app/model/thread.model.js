@@ -1,0 +1,13 @@
+"use strict";
+var uuid_1 = require('../util/uuid');
+var Thread = (function () {
+    function Thread(id, name, avatarSrc) {
+        this.id = id || uuid_1.uuid();
+        this.name = name;
+        this.avatarSrc = avatarSrc;
+    }
+    return Thread;
+}());
+exports.Thread = Thread;
+
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uLy4uL2dycHdhcmUxLjAvYXBwL21vZGVsL3RocmVhZC5tb2RlbC50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiO0FBQUEscUJBQXFCLGNBQWMsQ0FBQyxDQUFBO0FBSXBDO0lBTUksZ0JBQVksRUFBVyxFQUNYLElBQWEsRUFDYixTQUFrQjtRQUMxQixJQUFJLENBQUMsRUFBRSxHQUFHLEVBQUUsSUFBSSxXQUFJLEVBQUUsQ0FBQztRQUN2QixJQUFJLENBQUMsSUFBSSxHQUFHLElBQUksQ0FBQztRQUNqQixJQUFJLENBQUMsU0FBUyxHQUFHLFNBQVMsQ0FBQztJQUMvQixDQUFDO0lBQ0wsYUFBQztBQUFELENBYkEsQUFhQyxJQUFBO0FBYlksY0FBTSxTQWFsQixDQUFBIiwiZmlsZSI6Im1vZGVsL3RocmVhZC5tb2RlbC5qcyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IHV1aWQgfSBmcm9tICcuLi91dGlsL3V1aWQnO1xuaW1wb3J0IHtNZXNzYWdlfSBmcm9tIFwiLi9tZXNzYWdlcy5tb2RlbFwiO1xuXG5cbmV4cG9ydCBjbGFzcyBUaHJlYWQge1xuICAgIGlkOiBzdHJpbmc7XG4gICAgbGFzdE1lc3NhZ2U6IE1lc3NhZ2U7XG4gICAgbmFtZTogc3RyaW5nO1xuICAgIGF2YXRhclNyYzogc3RyaW5nO1xuXG4gICAgY29uc3RydWN0b3IoaWQ/OiBzdHJpbmcsXG4gICAgICAgICAgICAgICAgbmFtZT86IHN0cmluZyxcbiAgICAgICAgICAgICAgICBhdmF0YXJTcmM/OiBzdHJpbmcpIHtcbiAgICAgICAgdGhpcy5pZCA9IGlkIHx8IHV1aWQoKTtcbiAgICAgICAgdGhpcy5uYW1lID0gbmFtZTtcbiAgICAgICAgdGhpcy5hdmF0YXJTcmMgPSBhdmF0YXJTcmM7XG4gICAgfVxufSJdLCJzb3VyY2VSb290IjoiL3NvdXJjZS8ifQ==

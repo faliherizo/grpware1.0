@@ -22,4 +22,6 @@ io.sockets.on('connection', function (socket) {
         console.log(socket.pseudo + ' me parle ! Il me dit : ' + message);
     });
 });
+
+
 server.listen(3000);
