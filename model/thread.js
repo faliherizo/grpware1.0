@@ -5,11 +5,11 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 // create a schema
-var userSchema = new Schema({
+var threadSchema = new Schema({
     name:{ type:  String},
     lastMessage:{type:Schema.ObjectId, ref:'Message'},
 });
 
-var Thread = mongoose.model('Thread', userSchema);
+var Thread = mongoose.model('Thread', threadSchema);
 
 module.exports = Thread;

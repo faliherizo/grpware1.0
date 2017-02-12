@@ -63,8 +63,6 @@ function Sockets (app, server) {
         io.enable('browser client minification');
         io.enable('browser client gzip');
     });
-
-
     io.sockets.on('connection', function (socket) {
         var hs = socket.handshake
             , nickname = hs.balloons.user.username

@@ -9,10 +9,10 @@
 
     <!-- Polyfill(s) for older browsers -->
     <script src="js/vendor/core-js/client/shim.min.js"></script>
-
     <script src="js/vendor/zone.js/dist/zone.js"></script>
     <script src="js/vendor/reflect-metadata/Reflect.js"></script>
     <script src="js/vendor/systemjs/dist/system.src.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
 
     <script src="peer.js"></script>
     <!-- 2. Configure SystemJS -->
@@ -25,7 +25,9 @@
 <my-app>Loading...</my-app>
 
 <script>
+    var socket = io.connect('http://localhost:3000');
     System.import('app').catch(function(err){ console.error(err);  });
 </script>
+
 </body>
 </html>

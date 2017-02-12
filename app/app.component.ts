@@ -5,9 +5,9 @@ import {MessageService} from "./services/message.service";
 import {User} from "./model/users.model";
 import {Thread} from "./model/thread.model";
 
-//let echo: User    = new User('Echo Bot', 'images/avatars/male-avatar-1.png',
-                   //   'faly',0,0,'faliherizo@gmail.com');
-//let tEcho: Thread    = new Thread('tEcho', echo.name, echo.avatarSrc);
+let echo: User    = new User('Echo Bot', 'images/avatars/male-avatar-1.png',
+                     'faly',0,0,'faliherizo@gmail.com');
+let tEcho: Thread    = new Thread('tEcho', echo.name, echo.avatarSrc);
 @Component({
   moduleId: module.id,
   selector: 'my-app',

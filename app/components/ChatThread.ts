@@ -1,9 +1,9 @@
 import {GroupService} from "../services/group.service";
 import {Component, OnInit} from "@angular/core";
 @Component({
-    moduleId: module.id,
-    selector: 'my-app',
-    templateUrl: 'app.template.html',
+    selector: 'chat-thread',
+    templateUrl: 'views/template/chat.users.tmpl.html',
+    styleUrls:  ['app/chat.users.tmpl.css'],
     providers: [GroupService]
 })
 export class ChatThread implements OnInit{
